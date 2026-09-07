@@ -1,16 +1,16 @@
 workflows:
-  android-aab:
-    name: Build Android AAB
+  android-apk:
+    name: Build Android APK
     instance_type: mac_mini_m2
     max_build_duration: 120
     environment:
-      flutter: stable
-      xcode: latest
-      cocoapods: default
+      groups:
+        - google_play
     scripts:
-      - name: Get Flutter packages
-        script: flutter pub get
-      - name: Build Android AAB
-        script: flutter build appbundle --release
+      - ./gradlew :app:assembleRelease
     artifacts:
-      - build/app/outputs/bundle/release/*.aab
+      - app/build/outputs/apk/release/*.apk
+    publishing:
+      email:
+        recipients:
+          - your_email@gmail.com
