@@ -3,6 +3,8 @@ workflows:
     name: Build Android APK
     instance_type: mac_mini_m2
     scripts:
-      - gradle app:assembleRelease
+      - ls -la
+      - gradle assembleRelease
     artifacts:
+      - build/outputs/apk/release/*.apk
       - app/build/outputs/apk/release/*.apk
