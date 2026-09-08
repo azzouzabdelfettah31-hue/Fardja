@@ -1,0 +1,6 @@
+{
+  "name": "Fardja",
+  "description": "منصة دراما وموفيز للأفلام القصيرة والمسلسلات مع البث المباشر والاشتراكات والتحميل دون إنترنت.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
